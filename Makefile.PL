@@ -20,4 +20,10 @@ WriteMakefile(
 	'Time::Piece' => 0,
 	}, dist => $dist,
 	clean		=> { FILES => 'Date-Age-*' },
+	META_MERGE => {
+		resources => {
+			repository => 'https://github.com/nigelhorne/Date-Age',
+			bugtracker => 'https://github.com/nigelhorne/Date-Age/issues',
+		},
+	}
 );

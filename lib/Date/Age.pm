@@ -112,4 +112,8 @@ sub _is_leap {
 
 1;
 
+=head1 REPOSITORY
+
+L<https://github.com/nigelhorne/Date-Age>
+
 __END__
