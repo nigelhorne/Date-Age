@@ -16,8 +16,12 @@ WriteMakefile(
     AUTHOR       => 'Nigel Horne <njh@nigelhorne.com>',
     LICENSE      => 'GPL',
     PREREQ_PM    => {
-	'Test::More' => 0,
-	'Time::Piece' => 0,
+	'Time::Local' => 0,
+	'Time::Piece' => 0
+	}, TEST_REQUIRES => {
+		'Test::DescribeMe' => 0,
+		'Test::Most' => 0,
+		'Test::Needs' => 0,
 	}, dist => $dist,
 	clean		=> { FILES => 'Date-Age-*' },
 	META_MERGE => {

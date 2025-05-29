@@ -1,12 +1,10 @@
-[![CPAN version](https://badge.fury.io/pl/Date-Age.svg)](https://metacpan.org/pod/Date::Age)
-
 # NAME
 
 Date::Age - Return an age or age range from date(s)
 
 # VERSION
 
-Version 0.02
+Version 0.03
 
 # SYNOPSIS
 
