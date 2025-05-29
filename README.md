@@ -24,5 +24,3 @@ It works even with partial dates.
 # REPOSITORY
 
 [https://github.com/nigelhorne/Date-Age](https://github.com/nigelhorne/Date-Age)
-
-\_\_END\_\_
