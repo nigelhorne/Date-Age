@@ -52,7 +52,7 @@ sub details {
 	my $min_age = _calc_age($dob_late, $ref_early);
 	my $max_age = _calc_age($dob_early, $ref_late);
 
-	my $range_str = $min_age == $max_age ? "$min_age" : "$min_age–$max_age";
+	my $range_str = $min_age == $max_age ? $min_age : "$min_age–$max_age";
 	my $precise  = ($min_age == $max_age) ? $min_age : undef;
 
 	return {
@@ -69,8 +69,8 @@ sub _now_string {
 
 sub _calc_age {
 	my ($dob, $ref) = @_;
-	my $dob_tp = Time::Piece->strptime($dob, "%Y-%m-%d");
-	my $ref_tp = Time::Piece->strptime($ref, "%Y-%m-%d");
+	my $dob_tp = Time::Piece->strptime($dob, '%Y-%m-%d');
+	my $ref_tp = Time::Piece->strptime($ref, '%Y-%m-%d');
 
 	my $age = $ref_tp->year - $dob_tp->year;
 	if ($ref_tp->mon < $dob_tp->mon || ($ref_tp->mon == $dob_tp->mon && $ref_tp->mday < $dob_tp->mday)) {
@@ -98,7 +98,7 @@ sub _end_of_month {
 	my ($y, $m) = @_;
 
 	my @days_in_month = (31, 28 + _is_leap($y), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
-	return sprintf("%04d-%02d-%02d", $y, $m, $days_in_month[$m - 1]);
+	return sprintf('%04d-%02d-%02d', $y, $m, $days_in_month[$m - 1]);
 }
 
 sub _is_leap {
