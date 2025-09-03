@@ -1,3 +1,4 @@
+bin/date-age
 Changes
 lib/Date/Age.pm
 LICENSE
