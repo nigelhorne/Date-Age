@@ -11,16 +11,16 @@ my $verbose = 0;
 my $json = 0;
 
 GetOptions(
-    'help|h'     => \$help,
-    'verbose|v'  => \$verbose,
-    'json|j'     => \$json,
+	'help|h'	 => \$help,
+	'verbose|v' => \$verbose,
+	'json|j'	 => \$json,
 ) or pod2usage(2);
 
 pod2usage(1) if $help;
 
 # Check arguments
 if (@ARGV < 1 || @ARGV > 2) {
-    pod2usage("Error: Please provide 1 or 2 date arguments\n");
+	pod2usage("Error: Please provide 1 or 2 date arguments\n");
 }
 
 my ($dob, $ref_date) = @ARGV;
@@ -29,32 +29,32 @@ my ($dob, $ref_date) = @ARGV;
 $ref_date //= '';
 
 eval {
-    if ($json) {
-        # JSON output
-        require JSON;
-        my $details = details($dob, $ref_date || undef);
-        print JSON->new->pretty->encode($details) . "\n";
-    } elsif ($verbose) {
-        # Verbose output
-        my $details = details($dob, $ref_date || undef);
-        print "Date of Birth: $dob\n";
-        print "Reference Date: " . ($ref_date || "today") . "\n";
-        print "Age Range: " . $details->{range} . "\n";
-        print "Minimum Age: " . $details->{min_age} . "\n";
-        print "Maximum Age: " . $details->{max_age} . "\n";
-        if (defined $details->{precise}) {
-            print "Precise Age: " . $details->{precise} . "\n";
-        } else {
-            print "Precise Age: Cannot be determined (partial date)\n";
-        }
-    } else {
-        # Simple output - just the age range
-        print describe($dob, $ref_date || undef) . "\n";
-    }
+	if ($json) {
+		# JSON output
+		require JSON;
+		my $details = details($dob, $ref_date || undef);
+		print JSON->new->pretty->encode($details), "\n";
+	} elsif ($verbose) {
+		# Verbose output
+		my $details = details($dob, $ref_date || undef);
+		print "Date of Birth: $dob\n";
+		print 'Reference Date: ', ($ref_date || "today"), "\n";
+		print 'Age Range: ', $details->{range}, "\n";
+		print 'Minimum Age: ', $details->{min_age}, "\n";
+		print 'Maximum Age: ', $details->{max_age}, "\n";
+		if (defined $details->{precise}) {
+			print 'Precise Age: ', $details->{precise}, "\n";
+		} else {
+			print "Precise Age: Cannot be determined (partial date)\n";
+		}
+	} else {
+		# Simple output - just the age range
+		print describe($dob, $ref_date || undef), "\n";
+	}
 };
 
 if ($@) {
-    die "Error: $@";
+	die "Error: $@";
 }
 
 __END__
@@ -68,16 +68,16 @@ date-age - Calculate age from dates using Date::Age module
 date-age [options] <date_of_birth> [reference_date]
 
  Options:
-   -h, --help      Show this help message
+   -h, --help	  Show this help message
    -v, --verbose   Show detailed age information
-   -j, --json      Output results in JSON format
+   -j, --json	  Output results in JSON format
 
  Examples:
-   date-age 1990-05-15                    # Age from birth to today
-   date-age 1990-05-15 2020-01-01        # Age from birth to specific date
-   date-age 1990 2020-01-01              # Age range for partial birth year
+   date-age 1990-05-15					# Age from birth to today
+   date-age 1990-05-15 2020-01-01		# Age from birth to specific date
+   date-age 1990 2020-01-01			  # Age range for partial birth year
    date-age --verbose 1990-05 2020-01-01 # Detailed output
-   date-age --json 1990 2020-01-01       # JSON output
+   date-age --json 1990 2020-01-01	   # JSON output
 
 =head1 DESCRIPTION
 
@@ -90,8 +90,8 @@ the reference date. If no reference date is provided, the current date is used.
 
 Date formats supported:
   YYYY-MM-DD  (full date)
-  YYYY-MM     (year and month)  
-  YYYY        (year only)
+  YYYY-MM (year and month)  
+  YYYY	(year only)
 
 =head1 OPTIONS
 
