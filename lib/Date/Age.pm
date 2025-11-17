@@ -3,7 +3,6 @@ package Date::Age;
 use strict;
 use warnings;
 use Exporter 'import';
-use Time::Local;
 use Time::Piece;
 
 our @EXPORT_OK = qw(describe details);
@@ -52,7 +51,7 @@ sub details {
 	my $min_age = _calc_age($dob_late, $ref_early);
 	my $max_age = _calc_age($dob_early, $ref_late);
 
-	my $range_str = $min_age == $max_age ? $min_age : "$min_age–$max_age";
+	my $range_str = $min_age == $max_age ? $min_age : "$min_age-$max_age";
 	my $precise  = ($min_age == $max_age) ? $min_age : undef;
 
 	return {
@@ -102,12 +101,12 @@ sub _end_of_month {
 }
 
 sub _is_leap {
-	my $y = shift;
+	my $y = $_[0];
 
-	return 0 if $y % 4;
-	return 1 if $y % 100;
-	return 0 if $y % 400;
-	return 1;
+	return 1 if $y % 400 == 0;
+	return 0 if $y % 100 == 0;
+	return 1 if $y % 4 == 0;
+	return 0;
 }
 
 1;
@@ -117,3 +116,59 @@ __END__
 =head1 REPOSITORY
 
 L<https://github.com/nigelhorne/Date-Age>
+
+=head1 SUPPORT
+
+This module is provided as-is without any warranty.
+
+Please report any bugs or feature requests to C<bug-date-age at rt.cpan.org>,
+or through the web interface at
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Date-Age>.
+I will be notified, and then you'll
+automatically be notified of progress on your bug as I make changes.
+
+You can find documentation for this module with the perldoc command.
+
+    perldoc Date::Age
+
+You can also look for information at:
+
+=over 4
+
+=item * MetaCPAN
+
+L<https://metacpan.org/dist/Date-Age>
+
+=item * RT: CPAN's request tracker
+
+L<https://rt.cpan.org/NoAuth/Bugs.html?Dist=Date-Age>
+
+=item * CPAN Testers' Matrix
+
+L<http://matrix.cpantesters.org/?dist=Date-Age>
+
+=item * CPAN Testers Dependencies
+
+L<http://deps.cpantesters.org/?module=Date::Age>
+
+=back
+
+=head1 LICENCE AND COPYRIGHT
+
+Copyright 2025 Nigel Horne.
+
+Usage is subject to licence terms.
+
+The licence terms of this software are as follows:
+
+=over 4
+
+=item * Personal single user, single computer use: GPL2
+
+=item * All other users (including Commercial, Charity, Educational, Government)
+  must apply in writing for a licence for use from Nigel Horne at the
+  above e-mail.
+
+=back
+
+=cut

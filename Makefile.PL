@@ -17,7 +17,6 @@ WriteMakefile(
     LICENSE      => 'GPL',
 	EXE_FILES => [ 'bin/date-age' ],
     PREREQ_PM    => {
-	'Time::Local' => 0,
 	'Time::Piece' => 0
 	}, TEST_REQUIRES => {
 		'Test::DescribeMe' => 0,

@@ -26,3 +26,48 @@ It works even with partial dates.
 # REPOSITORY
 
 [https://github.com/nigelhorne/Date-Age](https://github.com/nigelhorne/Date-Age)
+
+# SUPPORT
+
+This module is provided as-is without any warranty.
+
+Please report any bugs or feature requests to `bug-cgi-info at rt.cpan.org`,
+or through the web interface at
+[http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Date-Age](http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Date-Age).
+I will be notified, and then you'll
+automatically be notified of progress on your bug as I make changes.
+
+You can find documentation for this module with the perldoc command.
+
+    perldoc Date::Age
+
+You can also look for information at:
+
+- MetaCPAN
+
+    [https://metacpan.org/dist/Date-Age](https://metacpan.org/dist/Date-Age)
+
+- RT: CPAN's request tracker
+
+    [https://rt.cpan.org/NoAuth/Bugs.html?Dist=Date-Age](https://rt.cpan.org/NoAuth/Bugs.html?Dist=Date-Age)
+
+- CPAN Testers' Matrix
+
+    [http://matrix.cpantesters.org/?dist=Date-Age](http://matrix.cpantesters.org/?dist=Date-Age)
+
+- CPAN Testers Dependencies
+
+    [http://deps.cpantesters.org/?module=Date::Age](http://deps.cpantesters.org/?module=Date::Age)
+
+# LICENCE AND COPYRIGHT
+
+Copyright 2025 Nigel Horne.
+
+Usage is subject to licence terms.
+
+The licence terms of this software are as follows:
+
+- Personal single user, single computer use: GPL2
+- All other users (including Commercial, Charity, Educational, Government)
+  must apply in writing for a licence for use from Nigel Horne at the
+  above e-mail.

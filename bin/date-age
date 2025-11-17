@@ -90,7 +90,7 @@ the reference date. If no reference date is provided, the current date is used.
 
 Date formats supported:
   YYYY-MM-DD  (full date)
-  YYYY-MM (year and month)  
+  YYYY-MM (year and month)
   YYYY	(year only)
 
 =head1 OPTIONS
