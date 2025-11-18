@@ -12,10 +12,10 @@ Version 0.03
 
     use Date::Age qw(describe details);
 
-    say describe("1943", "2016-01-01");    # "72-73"
+    say describe('1943', '2016-01-01');    # '72-73'
 
-    my $data = details("1943-05-01", "2016-01-01");
-    # { min_age => 72, max_age => 72, range => "72", precise => 72 }
+    my $data = details('1943-05-01', '2016-01-01');
+    # { min_age => 72, max_age => 72, range => '72', precise => 72 }
 
 # DESCRIPTION
 
@@ -31,7 +31,7 @@ It works even with partial dates.
 
 This module is provided as-is without any warranty.
 
-Please report any bugs or feature requests to `bug-cgi-info at rt.cpan.org`,
+Please report any bugs or feature requests to `bug-date-age at rt.cpan.org`,
 or through the web interface at
 [http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Date-Age](http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Date-Age).
 I will be notified, and then you'll

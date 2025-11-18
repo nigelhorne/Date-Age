@@ -1,6 +1,6 @@
 Revision history for Date-Range
 
-0.03
+0.03	Mon Nov 17 21:33:22 EST 2025
 	Fix pre-requisites
 	Added bin/date-age
 	Fixed is_leap logic
