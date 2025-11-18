@@ -7,6 +7,8 @@ use Time::Piece;
 
 our @EXPORT_OK = qw(describe details);
 
+my %CACHE;
+
 =head1 NAME
 
 Date::Age - Return an age or age range from date(s)
@@ -49,21 +51,21 @@ sub details {
 	my ($ref_early, $ref_late) = _parse_date_range($ref // _now_string());
 
 	# Parse once into Time::Piece objects
-	my $dob_te  = Time::Piece->strptime($dob_early, '%Y-%m-%d');
-	my $dob_tl  = Time::Piece->strptime($dob_late,  '%Y-%m-%d');
-	my $ref_te  = Time::Piece->strptime($ref_early, '%Y-%m-%d');
-	my $ref_tl  = Time::Piece->strptime($ref_late,  '%Y-%m-%d');
+	my $dob_te = _tp_cached($dob_early);
+	my $dob_tl = _tp_cached($dob_late);
+	my $ref_te = _tp_cached($ref_early);
+	my $ref_tl = _tp_cached($ref_late);
 
 	my $min_age = _calc_age_tp($dob_tl, $ref_te);
 	my $max_age = _calc_age_tp($dob_te, $ref_tl);
 
 	my $range_str = $min_age == $max_age ? $min_age : "$min_age-$max_age";
-	my $precise   = ($min_age == $max_age) ? $min_age : undef;
+	my $precise = ($min_age == $max_age) ? $min_age : undef;
 
 	return {
 		min_age => $min_age,
 		max_age => $max_age,
-		range   => $range_str,
+		range => $range_str,
 		precise => $precise,
 	};
 }
@@ -83,6 +85,12 @@ sub _now_string {
 	# }
 	# return $age;
 # }
+
+# For repeated describe() or details() with many identical dates (common in genealogical datasets), add a simple caching layer
+sub _tp_cached {
+	my $d = $_[0];
+	return $CACHE{$d} //= Time::Piece->strptime($d, '%Y-%m-%d');
+}
 
 sub _calc_age_tp {
 	my ($dob_tp, $ref_tp) = @_;
