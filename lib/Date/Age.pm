@@ -52,12 +52,12 @@ sub details {
 	my $max_age = _calc_age($dob_early, $ref_late);
 
 	my $range_str = $min_age == $max_age ? $min_age : "$min_age-$max_age";
-	my $precise  = ($min_age == $max_age) ? $min_age : undef;
+	my $precise = ($min_age == $max_age) ? $min_age : undef;
 
 	return {
 		min_age => $min_age,
 		max_age => $max_age,
-		range   => $range_str,
+		range => $range_str,
 		precise => $precise,
 	};
 }
@@ -82,15 +82,39 @@ sub _parse_date_range {
 	my $date = shift;
 
 	if ($date =~ /^\d{4}-\d{2}-\d{2}$/) {
+		_validate_ymd_strict($date);
 		return ($date, $date);
 	} elsif ($date =~ /^(\d{4})-(\d{2})$/) {
 		my ($y, $m) = ($1, $2);
-		return ("$y-$m-01", _end_of_month($y, $m));
+		die "Invalid month in date '$date'" if $m < 1 || $m > 12;
+
+		my $start = "$y-$m-01";
+		my $end = _end_of_month($y, $m);
+
+		_validate_ymd_strict($start);
+		_validate_ymd_strict($end);
+
+		return ($start, $end);
 	} elsif ($date =~ /^(\d{4})$/) {
 		return ("$1-01-01", "$1-12-31");
 	} else {
 		die "Unrecognized date format: $date";
 	}
+}
+
+sub _validate_ymd_strict {
+	my $date = $_[0];
+
+	# YYYY-MM-DD only
+	return unless $date =~ /^(\d{4})-(\d{2})-(\d{2})$/;
+	my ($y, $m, $d) = ($1, $2, $3);
+
+	die "Invalid month in date '$date'" if $m < 1 || $m > 12;
+
+	my @dim = (31, 28 + _is_leap($y), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+	my $max_d = $dim[$m - 1];
+
+	die "Invalid day in date '$date'" if $d < 1 || $d > $max_d;
 }
 
 sub _end_of_month {

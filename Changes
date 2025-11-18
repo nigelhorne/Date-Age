@@ -4,6 +4,7 @@ Revision history for Date-Range
 	Fix pre-requisites
 	Added bin/date-age
 	Fixed is_leap logic
+	Added date sanity tests
 
 0.02	Wed May 28 20:35:05 EDT 2025
 	Use gtar for the dist
