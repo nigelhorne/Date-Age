@@ -48,16 +48,22 @@ sub details {
 	my ($dob_early, $dob_late) = _parse_date_range($dob);
 	my ($ref_early, $ref_late) = _parse_date_range($ref // _now_string());
 
-	my $min_age = _calc_age($dob_late, $ref_early);
-	my $max_age = _calc_age($dob_early, $ref_late);
+	# Parse once into Time::Piece objects
+	my $dob_te  = Time::Piece->strptime($dob_early, '%Y-%m-%d');
+	my $dob_tl  = Time::Piece->strptime($dob_late,  '%Y-%m-%d');
+	my $ref_te  = Time::Piece->strptime($ref_early, '%Y-%m-%d');
+	my $ref_tl  = Time::Piece->strptime($ref_late,  '%Y-%m-%d');
+
+	my $min_age = _calc_age_tp($dob_tl, $ref_te);
+	my $max_age = _calc_age_tp($dob_te, $ref_tl);
 
 	my $range_str = $min_age == $max_age ? $min_age : "$min_age-$max_age";
-	my $precise = ($min_age == $max_age) ? $min_age : undef;
+	my $precise   = ($min_age == $max_age) ? $min_age : undef;
 
 	return {
 		min_age => $min_age,
 		max_age => $max_age,
-		range => $range_str,
+		range   => $range_str,
 		precise => $precise,
 	};
 }
@@ -66,15 +72,27 @@ sub _now_string {
 	return localtime->ymd();
 }
 
-sub _calc_age {
-	my ($dob, $ref) = @_;
-	my $dob_tp = Time::Piece->strptime($dob, '%Y-%m-%d');
-	my $ref_tp = Time::Piece->strptime($ref, '%Y-%m-%d');
+# sub _calc_age {
+	# my ($dob, $ref) = @_;
+	# my $dob_tp = Time::Piece->strptime($dob, '%Y-%m-%d');
+	# my $ref_tp = Time::Piece->strptime($ref, '%Y-%m-%d');
 
-	my $age = $ref_tp->year - $dob_tp->year;
-	if ($ref_tp->mon < $dob_tp->mon || ($ref_tp->mon == $dob_tp->mon && $ref_tp->mday < $dob_tp->mday)) {
+	# my $age = $ref_tp->year - $dob_tp->year;
+	# if ($ref_tp->mon < $dob_tp->mon || ($ref_tp->mon == $dob_tp->mon && $ref_tp->mday < $dob_tp->mday)) {
+		# $age--;
+	# }
+	# return $age;
+# }
+
+sub _calc_age_tp {
+	my ($dob_tp, $ref_tp) = @_;
+
+	my $age = $ref_tp->year() - $dob_tp->year();
+
+	if ($ref_tp->mon() < $dob_tp->mon() || ($ref_tp->mon == $dob_tp->mon && $ref_tp->mday < $dob_tp->mday)) {
 		$age--;
 	}
+
 	return $age;
 }
 
