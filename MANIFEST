@@ -8,3 +8,4 @@ README.md
 t/30-basics.t
 t/eof.t
 t/eol.t
+t/invalid.t
