@@ -13,12 +13,12 @@ input:
     optional: 0
     position: 0
     type: string
-    matches: '\d{4}'
+    matches: "\\d{4}"
   ref:
     optional: 0
     position: 1
     type: string
-    matches: '\d{4}'
+    matches: "\\d{4}"
 output:
   type: string
 

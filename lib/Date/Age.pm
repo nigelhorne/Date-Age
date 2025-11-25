@@ -2,6 +2,8 @@ package Date::Age;
 
 use strict;
 use warnings;
+
+use Carp qw(carp croak);
 use Exporter 'import';
 use Time::Local qw(timelocal);
 
@@ -40,6 +42,9 @@ sub describe {
 	if($_[0] eq __PACKAGE__) {
 		shift;
 	}
+
+	croak('Usage: ', __PACKAGE__, '::describe($dob, $ref)') unless(scalar(@_) == 2);
+
 	my ($dob, $ref) = @_;
 	my $info = details($dob, $ref);
 	return $info->{range};
@@ -49,6 +54,9 @@ sub details {
 	if($_[0] eq __PACKAGE__) {
 		shift;
 	}
+
+	croak('Usage: ', __PACKAGE__, '::details($dob, $ref)') unless(scalar(@_) == 2);
+
 	my ($dob, $ref) = @_;
 
 	my ($dob_early, $dob_late) = _parse_date_range($dob);
