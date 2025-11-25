@@ -63,7 +63,8 @@ sub details {
 }
 
 sub _now_string {
-	return localtime->ymd();
+	my ($sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst) = localtime();
+	return sprintf('%04d-%02d-%02d', $year + 1900, $mon + 1, $mday);
 }
 
 sub _calc_age_localtime {
