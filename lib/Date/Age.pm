@@ -37,12 +37,18 @@ It works even with partial dates.
 =cut
 
 sub describe {
+	if($_[0] eq __PACKAGE__) {
+		shift;
+	}
 	my ($dob, $ref) = @_;
 	my $info = details($dob, $ref);
 	return $info->{range};
 }
 
 sub details {
+	if($_[0] eq __PACKAGE__) {
+		shift;
+	}
 	my ($dob, $ref) = @_;
 
 	my ($dob_early, $dob_late) = _parse_date_range($dob);
