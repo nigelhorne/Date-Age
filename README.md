@@ -6,7 +6,7 @@ Date::Age - Return an age or age range from date(s)
 
 # VERSION
 
-Version 0.04
+Version 0.05
 
 # SYNOPSIS
 
