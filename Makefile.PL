@@ -19,6 +19,7 @@ WriteMakefile(
     PREREQ_PM => {
 	'Time::Local' => 0
 	}, TEST_REQUIRES => {
+		'IPC::Run3' => 0,
 		'Test::DescribeMe' => 0,
 		'Test::Most' => 0,
 		'Test::Needs' => 0,

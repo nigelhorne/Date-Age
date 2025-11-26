@@ -4,7 +4,8 @@ use strict;
 use warnings;
 
 use FindBin qw($Bin);
-use Test::Needs 'App::Test::Generator', 'IPC::Run3';
+use Test::Needs 'App::Test::Generator';
+use IPC::Run3;
 use IPC::System::Simple qw(system);
 use Test::Most;
 
