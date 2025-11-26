@@ -25,7 +25,7 @@ is($info->{precise}, 20, 'details precise age available');
 my $today = eval { Date::Age::_now_string() };
 like($today, qr/^\d{4}-\d{2}-\d{2}$/, '_now_string returns valid date format');
 
-# Test YYYY-MM date format (uncovered branch) - CORRECTED
+# Test YYYY-MM date format (uncovered branch)
 $info = details('2000-05', '2020-01-01');
 is($info->{range}, '19', 'YYYY-MM format gives single age when ref date before birthday month');
 is($info->{min_age}, 19, 'YYYY-MM min_age correct');
