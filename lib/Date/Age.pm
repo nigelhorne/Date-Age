@@ -45,7 +45,7 @@ sub describe {
 		shift;
 	}
 
-	croak('Usage: ', __PACKAGE__, '::describe($dob, $ref)') unless(scalar(@_) == 2);
+	croak('Usage: ', __PACKAGE__, '::describe($dob, $ref)') if(scalar(@_) == 0);
 
 	my ($dob, $ref) = @_;
 	my $info = details($dob, $ref);
@@ -57,7 +57,7 @@ sub details {
 		shift;
 	}
 
-	croak('Usage: ', __PACKAGE__, '::details($dob, $ref)') unless(scalar(@_) == 2);
+	croak('Usage: ', __PACKAGE__, '::details($dob, $ref)') if(scalar(@_) == 0);
 
 	my ($dob, $ref) = @_;
 
