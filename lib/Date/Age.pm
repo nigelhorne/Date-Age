@@ -164,6 +164,14 @@ sub _is_leap {
 
 __END__
 
+=head1 SEE ALSO
+
+=over 4
+
+=item * Test coverage report: L<https://nigelhorne.github.io/Date-Age/coverage/>
+
+=back
+
 =head1 REPOSITORY
 
 L<https://github.com/nigelhorne/Date-Age>

@@ -23,6 +23,10 @@ This module calculates the age or possible age range between a date of birth
 and another date (typically now or a death date).
 It works even with partial dates.
 
+# SEE ALSO
+
+- Test coverage report: [https://nigelhorne.github.io/Date-Age/coverage/](https://nigelhorne.github.io/Date-Age/coverage/)
+
 # REPOSITORY
 
 [https://github.com/nigelhorne/Date-Age](https://github.com/nigelhorne/Date-Age)
