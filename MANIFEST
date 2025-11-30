@@ -16,5 +16,6 @@ t/eol.t
 t/fuzz.t
 t/invalid.t
 t/pod-cm.t
+t/pod-coverage.t
 t/pod-synopsis.t
 t/pod.t
