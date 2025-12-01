@@ -6,13 +6,13 @@ Date::Age - Return an age or age range from date(s)
 
 # VERSION
 
-Version 0.06
+Version 0.07
 
 # SYNOPSIS
 
     use Date::Age qw(describe details);
 
-    print describe('1943', '2016-01-01'), "\n";    # '72-73'
+    print describe('1943', '2016-01-01'), "\n";   # '72-73'
 
     my $data = details('1943-05-01', '2016-01-01');
     # { min_age => 72, max_age => 72, range => '72', precise => 72 }
@@ -46,8 +46,8 @@ range of possible ages.
 
 Examples:
 
-    describe('1943');              # e.g. '80-81'
-    describe('1943-05', '2016');   # '72-73'
+    describe('1943');     # e.g. '80-81'
+    describe('1943-05', '2016');  # '72-73'
     describe('1943-05-01', '2016-01-01');  # '72'
 
 This routine is a convenience wrapper around `details()` that returns only
