@@ -47,7 +47,7 @@ It works even with partial dates.
   my $range = describe($dob);
   my $range = describe($dob, $ref_date);
 
-Returns a human-readable age or age range for the supplied date of birth.
+Returns a string containing a human-readable age or age range for the supplied date of birth.
 
 C<describe()> accepts a date of birth in any of the formats supported by
 L</details> (year only, year-month, or full year-month-day).  An optional
