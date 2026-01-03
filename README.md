@@ -27,12 +27,20 @@ It works even with partial dates.
 
 # FUNCTIONS
 
-## describe
+## describe($dob, $ref\_date)
 
     my $range = describe($dob);
     my $range = describe($dob, $ref_date);
 
-Returns a human-readable age or age range for the supplied date of birth.
+- $dob
+
+    Date of birth, in any format supported by `details()`.
+
+- $ref\_date
+
+    Optional reference date. If omitted, the current local date is used.
+
+Returns a string containing a human-readable age or age range for the supplied date of birth.
 
 `describe()` accepts a date of birth in any of the formats supported by
 ["details"](#details) (year only, year-month, or full year-month-day).  An optional

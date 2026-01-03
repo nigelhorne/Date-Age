@@ -42,10 +42,22 @@ It works even with partial dates.
 
 =head1 FUNCTIONS
 
-=head2 describe
+=head2 describe($dob, $ref_date)
 
   my $range = describe($dob);
   my $range = describe($dob, $ref_date);
+
+=over 4
+
+=item $dob
+
+Date of birth, in any format supported by C<details()>.
+
+=item $ref_date
+
+Optional reference date. If omitted, the current local date is used.
+
+=back
 
 Returns a string containing a human-readable age or age range for the supplied date of birth.
 
