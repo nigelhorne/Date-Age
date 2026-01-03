@@ -1,0 +1,316 @@
+{
+   "runs" : [
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484116.05392,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1767484116.05348,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484116.21869,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1767484116.21839,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484116.38989,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1767484116.38955,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484116.55469,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1767484116.55431,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484116.71881,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1767484116.71851,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484116.88177,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1767484116.88149,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484117.04682,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1767484117.04657,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484117.21112,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1767484117.21086,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484117.39101,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1767484117.38292,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484117.61692,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1767484117.61628,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484120.41847,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1767484117.81249,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484117.95684,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1767484117.95671,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484118.19968,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "t/30-basics.t",
+         "start" : 1767484118.19611,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484118.47561,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "t/age.t",
+         "start" : 1767484118.46717,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484118.75022,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "t/eof.t",
+         "start" : 1767484118.74994,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484118.98472,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "t/eol.t",
+         "start" : 1767484118.98442,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484119.16593,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "t/fuzz.t",
+         "start" : 1767484119.16589,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484119.4134,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "t/invalid.t",
+         "start" : 1767484119.4102,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484119.679,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "t/pod-cm.t",
+         "start" : 1767484119.67872,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484119.91139,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "t/pod-coverage.t",
+         "start" : 1767484119.91111,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484120.14543,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "t/pod-synopsis.t",
+         "start" : 1767484120.14515,
+         "version" : "0.07"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Calculate precise or range-based age from dates",
+         "dir" : "/home/runner/work/Date-Age/Date-Age",
+         "finish" : 1767484120.37919,
+         "name" : "Date-Age",
+         "perl" : "5.40.3",
+         "run" : "t/pod.t",
+         "start" : 1767484120.37891,
+         "version" : "0.07"
+      }
+   ],
+   "summary" : {
+      "Total" : {
+         "branch" : {
+            "covered" : 28,
+            "error" : 6,
+            "percentage" : 82.3529411764706,
+            "total" : 34,
+            "uncoverable" : 0
+         },
+         "condition" : {
+            "covered" : 6,
+            "error" : 6,
+            "percentage" : 50,
+            "total" : 12,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 71,
+            "error" : 2,
+            "percentage" : 97.2602739726027,
+            "total" : 73
+         },
+         "subroutine" : {
+            "covered" : 14,
+            "percentage" : 100,
+            "total" : 14
+         },
+         "total" : {
+            "covered" : 119,
+            "error" : 14,
+            "percentage" : 89.4736842105263,
+            "total" : 133,
+            "uncoverable" : 0
+         }
+      },
+      "blib/lib/Date/Age.pm" : {
+         "branch" : {
+            "covered" : 28,
+            "error" : 6,
+            "percentage" : 82.3529411764706,
+            "total" : 34,
+            "uncoverable" : 0
+         },
+         "condition" : {
+            "covered" : 6,
+            "error" : 6,
+            "percentage" : 50,
+            "total" : 12,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 71,
+            "error" : 2,
+            "percentage" : 97.2602739726027,
+            "total" : 73
+         },
+         "subroutine" : {
+            "covered" : 14,
+            "percentage" : 100,
+            "total" : 14
+         },
+         "total" : {
+            "covered" : 119,
+            "error" : 14,
+            "percentage" : 89.4736842105263,
+            "total" : 133,
+            "uncoverable" : 0
+         }
+      }
+   }
+}
