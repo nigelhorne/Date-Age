@@ -75,10 +75,10 @@ sub describe {
 		shift;
 	}
 
-	croak('Usage: ', __PACKAGE__, '::describe($dob, $ref)') if(scalar(@_) == 0);
+	croak('Usage: ', __PACKAGE__, '::describe($dob, $ref_date)') if(scalar(@_) == 0);
 
-	my ($dob, $ref) = @_;
-	my $info = details($dob, $ref);
+	my ($dob, $ref_date) = @_;
+	my $info = details($dob, $ref_date);
 	return $info->{range};
 }
 
@@ -154,10 +154,10 @@ sub details {
 
 	croak('Usage: ', __PACKAGE__, '::details($dob, $ref)') if(scalar(@_) == 0);
 
-	my ($dob, $ref) = @_;
+	my ($dob, $ref_date) = @_;
 
 	my ($dob_early, $dob_late) = _parse_date_range($dob);
-	my ($ref_early, $ref_late) = _parse_date_range($ref // _now_string());
+	my ($ref_early, $ref_late) = _parse_date_range($ref_date // _now_string());
 
 	my $min_age = _calc_age_localtime($dob_late,  $ref_early);
 	my $max_age = _calc_age_localtime($dob_early, $ref_late);
