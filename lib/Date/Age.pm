@@ -94,10 +94,22 @@ sub describe {
 	return $info->{range};
 }
 
-=head2 details
+=head2 details($dob, $ref_date)
 
   my $info = details($dob);
   my $info = details($dob, $ref_date);
+
+=over 4
+
+=item $dob
+
+Date of birth, in any format supported by C<details()>.
+
+=item $ref_date
+
+Optional reference date. If omitted, the current local date is used.
+
+=back
 
 Returns a hashref describing the full computed age information.  This routine
 performs the underlying date-range expansion and age calculation that
