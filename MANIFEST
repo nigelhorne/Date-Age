@@ -1,5 +1,6 @@
 bin/date-age
 Changes
+cpanfile
 lib/Date/Age.pm
 LICENSE
 Makefile.PL
