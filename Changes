@@ -1,5 +1,8 @@
 Revision history for Date-Range
 
+0.08
+	Update POD to reflect the code
+
 0.07	Sun Nov 30 19:44:01 EST 2025
 	Use Test::Which
 	Properly document the public methods

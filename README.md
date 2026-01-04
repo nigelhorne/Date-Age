@@ -61,10 +61,18 @@ Examples:
 This routine is a convenience wrapper around `details()` that returns only
 the formatted range string.
 
-## details
+## details($dob, $ref\_date)
 
     my $info = details($dob);
     my $info = details($dob, $ref_date);
+
+- $dob
+
+    Date of birth, in any format supported by `details()`.
+
+- $ref\_date
+
+    Optional reference date. If omitted, the current local date is used.
 
 Returns a hashref describing the full computed age information.  This routine
 performs the underlying date-range expansion and age calculation that
