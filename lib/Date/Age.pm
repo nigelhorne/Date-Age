@@ -55,7 +55,8 @@ Date of birth, in any format supported by C<details()>.
 
 =item $ref_date
 
-Optional reference date. If omitted, the current local date is used.
+Optional reference date.
+If omitted, the current local date is used.
 
 =back
 
